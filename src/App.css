@@ -1,38 +1,279 @@
+/* CONTAINERS */
 .App {
-  text-align: center;
+  position: absolute;
+}
+.App-container {
+  background-color: #f4f4f4;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 3vw;
   pointer-events: none;
+  position: relative;
+  bottom: 2vw;
+  background-color: white;
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* HEADER */
+.brand-logo {
+  padding: 0% 0px 0px 12.5vw;
+  position: relative;
+  top: -2px;
+}
+.top {
+  background-color: black;
+  width: 100%;
+  height: 5px;
+  position: fixed;
+  z-index: 5;
+}
+.header {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  top: 1px;
+  height: 120px;
+  background-color: white;
+  margin-top: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* MENUS */
+
+.header-menu > ul > li,
+.header-submenu > ul > li {
+  padding: 4px 10px;
+  transition: 500ms;
+  border-bottom: 3px solid rgba(0, 0, 0, 0);
+}
+
+.header-menu > ul > li:hover,
+.header-submenu > ul > li:hover {
+  border-bottom: 3px solid black;
+  transition: 500ms;
+  cursor: pointer;
+  filter: none;
+}
+.header-submenu-top {
+  font-weight: 300;
+  font-size: 14px;
+  align-self: flex-end;
+  padding: 0px 50px;
+}
+.header-contents {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.logo {
+  height: 150px;
+  width: 150px;
+  z-index: 2;
+}
+.logo-section {
+  height: 200px;
+  width: 200px;
+  z-index: 2;
+}
+.logo2 {
+  display: none;
+}
+
+.banner {
+  margin-top: 120px;
+  width: 100%;
+}
+.banner-width {
+  width: 100%;
+}
+
+/* FOOTER */
+.brand-images {
+  width: 80px;
+  height: 50px;
+  margin: 0px 5px;
+  padding: 0px 5px;
+}
+.brand-images:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  width: 100%;
+}
+
+.brand-type {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brands {
+  border: 2px solid rgb(221, 216, 216);
+  padding: 0px 2% 3% 2%;
+  margin: 12.5%;
+  text-align: center;
+}
+
+p {
+  font-size: 12px;
+  font-weight: 600;
+  text-align: initial;
+  text-transform: uppercase;
+  color: rgba(108, 106, 107, 0.88);
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+}
+
+/* BUTTONS  */
+.button {
+  border: 2px solid white;
+  font-size: 18px;
+  background-color: white;
+  text-transform: uppercase;
+  background-color: #fff;
+  color: #1c1c1c;
+  font-weight: 600;
+  padding: 10px 30px;
+  margin: 10px;
+}
+.button:hover {
+  background-color: #f5f0f0bd;
+}
+.button2 {
+  background-color: #1c1c1c;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.button2:hover {
+  color: #1c1c1c;
+  background-color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* VALUE PROPOSITION SECTION */
+
+.card-dark {
+  background-color: #1c1c1c;
+  text-align: center;
+  color: white;
+  height: 350px;
+}
+.value-proposition {
+  padding: 0px 0px 5% 2%;
+  margin: 10.5%;
+  text-align: center;
+}
+.value-text {
+  font-size: 24px;
+  margin-top: 0px;
+  padding: 5px;
+}
+.text {
+  font-weight: 700;
+  font-size: 30px;
+  padding: 15px;
+}
+.values {
+  width: 100%;
+  display: flex;
+  color: #b84c16;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  margin: 10px;
+}
+.values > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+.icons {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
+
+/* RESPONSIVNESS */
+@media screen and (max-width: 1000px) {
+  .App-logo {
+    bottom: 5vw;
+    height: 5vw;
   }
-  to {
-    transform: rotate(360deg);
+  .brand-type {
+    flex-direction: column;
+  }
+  ul {
+    justify-content: center;
+  }
+  .header-contents {
+    left: 0px;
+    margin-top: 60px;
+    width: 90%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    display: inline;
+    position: absolute;
+    box-shadow: 1px 0 rgb(215, 212, 212);
+    font-weight: 600;
+    z-index: -2;
+  }
+
+  .menu-mobile {
+    display: block;
+  }
+  .header-menu > ul > li,
+  .header-submenu > ul > li {
+    width: 150px;
+    padding-bottom: 15px;
+  }
+  .App-container {
+    min-height: 0vh;
+  }
+  .logo {
+    height: 80px;
+    width: 80px;
+  }
+  .logo2 {
+    display: inline;
+    height: 50px;
+    width: 50px;
+    z-index: 2;
+    margin: 0 5px 15px 5px;
+    padding: 5px;
+  }
+  .header {
+    height: 60px;
+  }
+  .brand-logo {
+    padding: 0;
+  }
+  .banner {
+    margin-top: 70px;
+  }
+  .header-submenu-top {
+    display: none;
+  }
+  .card-dark {
+    height: 490px;
+  }
+  .values {
+    padding: 0px;
+    margin: 0px;
   }
 }
